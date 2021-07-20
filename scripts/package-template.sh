@@ -8,7 +8,7 @@ fi
 
 mkdir -p bin
 aws cloudformation package \
-    --template-file $cwd/../deploy/brighid-discord-adapter.template.yml \
+    --template-file $cwd/../deploy/brighid-commands-resources.template.yml \
     --s3-bucket $ARTIFACT_STORE \
     --s3-prefix template-objects \
-    --output-template-file $cwd/../bin/brighid-discord-adapter.template.yml
+    --output-template-file $cwd/../bin/brighid-commands-resources.template.yml

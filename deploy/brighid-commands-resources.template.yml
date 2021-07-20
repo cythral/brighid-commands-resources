@@ -52,9 +52,9 @@ Resources:
           Identity__ClientId: !Ref IdentityClientId
           Identity__ClientSecret: !Ref IdentityClientSecret
           Commands__ServiceUri: !Ref CommandsServiceUri
-        
-    CommandResourceTest:
-      Type: Custom::Resource
-      Properties:
-        ServiceToken: !GetAtt CommandResource.Arn
-        Name: test-command
+       
+  CommandResourceTest:
+    Type: Custom::Resource
+    Properties:
+      ServiceToken: !GetAtt CommandResource.Arn
+      Name: test-command

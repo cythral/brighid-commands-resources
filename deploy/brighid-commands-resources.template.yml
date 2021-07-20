@@ -25,7 +25,7 @@ Parameters:
     Description: URI of the commands service.
 
 Resources:
-  ResponseHandler:
+  CommandResource:
     Type: AWS::Serverless::Function
     Properties:
       Handler: Brighid.Commands.Resources.Command::Brighid.Commands.Resources.CommandHandler::Run
@@ -42,3 +42,9 @@ Resources:
           Identity__ClientId: !Ref IdentityClientId
           Identity__ClientSecret: !Ref IdentityClientSecret
           Commands__ServiceUri: !Ref CommandsServiceUri
+
+  CommandResourceTest:
+    Type: Custom::Resource
+    Properties:
+      ServiceToken: !GetAtt CommandResource.Arn
+      Name: test-command

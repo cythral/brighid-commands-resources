@@ -45,16 +45,15 @@ Resources:
       VpcConfig:
         SecurityGroupIds:
           - !Ref CommandsCustomResourcesSecurityGroup
-        SubnetIds: !Split [",", !ImportValue cfn-utilities:SubnetIds]
+        SubnetIds: !Split [",", !ImportValue cfn-utilities:PrivateSubnetIds]
       Environment:
         Variables:
           Identity__IdentityServerUri: !Ref IdentityServerUri
           Identity__ClientId: !Ref IdentityClientId
           Identity__ClientSecret: !Ref IdentityClientSecret
           Commands__ServiceUri: !Ref CommandsServiceUri
-
-  CommandResourceTest:
-    Type: Custom::Resource
-    Properties:
-      ServiceToken: !GetAtt CommandResource.Arn
-      Name: test-command
+  # CommandResourceTest:
+  #   Type: Custom::Resource
+  #   Properties:
+  #     ServiceToken: !GetAtt CommandResource.Arn
+  #     Name: test-command

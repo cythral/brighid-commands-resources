@@ -1,0 +1,44 @@
+Transform: AWS::Serverless-2016-10-31
+Parameters:
+  LambdajectionLayerVersion:
+    Type: String
+    Description: ARN of the Lambda Layer containing Lambdajection + its dependencies.
+
+  DotnetLayerVersion:
+    Type: String
+    Description: ARN of the Lambda Layer containing .NET.
+
+  IdentityServerUri:
+    Type: String
+    Description: URI of the identity server.
+
+  IdentityClientId:
+    Type: String
+    Description: Client ID of the Discord Application.
+
+  IdentityClientSecret:
+    Type: String
+    Description: Encrypted Client Secret of the Discord Application.
+
+  CommandsServiceUri:
+    Type: String
+    Description: URI of the commands service.
+
+Resources:
+  ResponseHandler:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: Brighid.Commands.Resources.Command::Brighid.Commands.Resources.CommandHandler::Run
+      Runtime: provided.al2
+      Timeout: 30
+      CodeUri: ../bin/Resources.Command/Release/net5.0/linux-x64/publish/
+      MemorySize: 512
+      Layers:
+        - !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:dotnet:${DotnetLayerVersion}
+        - !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:lambdajection:${LambdajectionLayerVersion}
+      Environment:
+        Variables:
+          Identity__IdentityServerUri: !Ref IdentityServerUri
+          Identity__ClientId: !Ref IdentityClientId
+          Identity__ClientSecret: !Ref IdentityClientSecret
+          Commands__ServiceUri: !Ref CommandsServiceUri

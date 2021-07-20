@@ -36,6 +36,8 @@ Resources:
       Layers:
         - !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:dotnet:${DotnetLayerVersion}
         - !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:lambdajection:${LambdajectionLayerVersion}
+      VpcConfig:
+        SubnetIds: !Split [",", !ImportValue cfn-utilities:SubnetIds]
       Environment:
         Variables:
           Identity__IdentityServerUri: !Ref IdentityServerUri

@@ -1,5 +1,3 @@
-using Brighid.Commands.Client;
-
 using Lambdajection.CustomResource;
 
 namespace Brighid.Commands.Resources

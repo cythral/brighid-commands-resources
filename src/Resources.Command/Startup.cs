@@ -22,7 +22,7 @@ namespace Brighid.Commands.Resources
         /// <inheritdoc />
         public void ConfigureServices(IServiceCollection services)
         {
-            services.ConfigureBrighidIdentity(configuration.GetSection("Identity"));
+            services.ConfigureBrighidIdentity<IdentityConfig>(configuration.GetSection("Identity"));
             services.AddBrighidCommands(configuration.GetSection("Commands").Bind);
         }
     }

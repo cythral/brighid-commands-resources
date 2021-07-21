@@ -10,6 +10,6 @@ namespace Brighid.Commands.Resources
         /// <summary>
         /// Gets or sets the command's id/name in string form.
         /// </summary>
-        public string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
     }
 }

@@ -37,7 +37,7 @@ namespace Brighid.Commands.Resources
         public async Task<OutputData> Create(CustomResourceRequest<CommandRequest> request, CancellationToken cancellationToken = default)
         {
             var result = await commandsClient.CreateCommand(request.ResourceProperties, requestOptions, cancellationToken);
-            return (OutputData)result;
+            return new OutputData { Id = result.Name };
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace Brighid.Commands.Resources
         public async Task<OutputData> Update(CustomResourceRequest<CommandRequest> request, CancellationToken cancellationToken = default)
         {
             var result = await commandsClient.CreateCommand(request.ResourceProperties, requestOptions, cancellationToken);
-            return (OutputData)result;
+            return new OutputData { Id = result.Name };
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Brighid.Commands.Resources
         public async Task<OutputData> Delete(CustomResourceRequest<CommandRequest> request, CancellationToken cancellationToken = default)
         {
             var result = await commandsClient.DeleteCommand(request.PhysicalResourceId, requestOptions, cancellationToken);
-            return (OutputData)result;
+            return new OutputData { Id = result.Name };
         }
     }
 }

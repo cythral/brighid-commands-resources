@@ -39,6 +39,8 @@ Resources:
       Timeout: 30
       CodeUri: ../bin/Resources.Command/Release/net5.0/linux-x64/publish/
       MemorySize: 512
+      Policies:
+        - !ImportValue cfn-utilities:SecretsKeyDecryptPolicyArn
       Layers:
         - !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:dotnet:${DotnetLayerVersion}
         - !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:lambdajection:${LambdajectionLayerVersion}

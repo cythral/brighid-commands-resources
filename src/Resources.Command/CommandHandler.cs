@@ -28,6 +28,8 @@ namespace Brighid.Commands.Resources
             this.commandsClient = commandsClient;
         }
 
+#pragma warning disable IDE0060
+
         /// <summary>
         /// Creates a new command.
         /// </summary>
@@ -48,7 +50,7 @@ namespace Brighid.Commands.Resources
         /// <returns>The resulting command data.</returns>
         public async Task<OutputData> Update(CustomResourceRequest<CommandRequest> request, CancellationToken cancellationToken = default)
         {
-            var result = await commandsClient.CreateCommand(request.ResourceProperties, requestOptions, cancellationToken);
+            var result = await commandsClient.UpdateCommand(request.PhysicalResourceId, request.ResourceProperties, requestOptions, cancellationToken);
             return new OutputData { Id = result.Name };
         }
 

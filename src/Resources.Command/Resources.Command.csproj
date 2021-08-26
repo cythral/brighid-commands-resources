@@ -2,12 +2,12 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
-        <NoWarn>CS8073</NoWarn>
+        <NoWarn>CS8073;NU5104</NoWarn>
         <PackageId></PackageId>
         <AssemblyName>Brighid.Commands.Resources.Command</AssemblyName>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Brighid.Commands.Client" Version="0.1.0" />
+        <PackageReference Include="Brighid.Commands.Client" Version="0.2.0-beta1" />
         <PackageReference Include="Lambdajection" Version="0.8.4" />
         <PackageReference Include="Lambdajection.CustomResource" Version="0.8.4" />
         <PackageReference Include="Lambdajection.Encryption" Version="0.8.4" />

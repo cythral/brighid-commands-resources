@@ -4,9 +4,9 @@
     ".NETCoreApp,Version=v5.0": {
       "Brighid.Commands.Client": {
         "type": "Direct",
-        "requested": "[0.2.0-beta1, )",
-        "resolved": "0.2.0-beta1",
-        "contentHash": "8PjYLVBTAExBcz+v8BMHwZiufaJHo7CHK3m9zi2eN8TGEXc1824oNExAerq6G3kIbKzRx7/ZQx3ks1b7jdUEMA==",
+        "requested": "[0.2.0-beta2, )",
+        "resolved": "0.2.0-beta2",
+        "contentHash": "Er1s6b6xhWEp+ipM0VcQ4hYHY5M5lAE1PivzsuDM6Uv1MtWeQ/QFXzJd1vNBSxtzP4loodzYHZUWAaKIkcpIvQ==",
         "dependencies": {
           "Brighid.Identity.Client": "0.4.0",
           "Microsoft.Extensions.Configuration": "5.0.0",

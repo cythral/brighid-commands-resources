@@ -1,6 +1,6 @@
 {
-    "DotnetLayerVersion": "3",
-    "LambdajectionLayerVersion": "10",
+    "DotnetLayerVersion": "4",
+    "LambdajectionLayerVersion": "11",
     "CommandsServiceUri": "http://commands.dev.brigh.id",
     "IdentityServerUri": "http://identity.dev.brigh.id",
     "IdentityClientId": "8ac8c1f5-005d-4282-94b4-9ff6ba7cc601",

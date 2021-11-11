@@ -12,6 +12,7 @@
     <PackageTags>AWS Amazon Cloud Security OAuth2 OpenID</PackageTags>
   </PropertyGroup>
   <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
     <Configuration Condition="$(Configuration) == ''">Debug</Configuration>
     <Nullable>enable</Nullable>
     <LangVersion>9.0</LangVersion>
@@ -37,9 +38,6 @@
     <RestorePackagesPath>$(MSBuildThisFileDirectory).nuget</RestorePackagesPath>
     <CompilerGeneratedFilesOutputPath>$(MSBuildThisFileDirectory)obj\$(MSBuildProjectName)\$(Configuration)</CompilerGeneratedFilesOutputPath>
   </PropertyGroup>
-  <ItemGroup Condition="Exists('$(MSBuildThisFileDirectory)\.editorconfig')">
-    <AdditionalFiles Include="$(MSBuildThisFileDirectory)\.editorconfig" />
-  </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
   </ItemGroup>

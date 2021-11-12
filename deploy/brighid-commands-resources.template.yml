@@ -54,9 +54,3 @@ Resources:
           Identity__ClientId: !Ref IdentityClientId
           Identity__ClientSecret: !Ref IdentityClientSecret
           Commands__ServiceUri: !Ref CommandsServiceUri
-
-  TestCommand:
-    Type: Custom::Command
-    Properties:
-      ServiceToken: !GetAtt CommandResource.Arn
-      Name: test

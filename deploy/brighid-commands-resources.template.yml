@@ -37,7 +37,7 @@ Resources:
       Handler: Brighid.Commands.Resources.Command::Brighid.Commands.Resources.CommandHandler::Run
       Runtime: provided.al2
       Timeout: 30
-      CodeUri: ../bin/Resources.Command/Release/net6.0/linux-x64/publish/
+      CodeUri: ../bin/Resources.Command/Release/linux-x64/publish/
       MemorySize: 512
       Policies:
         - !ImportValue cfn-utilities:SecretsKeyDecryptPolicyArn

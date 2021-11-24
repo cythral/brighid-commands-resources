@@ -54,3 +54,10 @@ Resources:
           Identity__ClientId: !Ref IdentityClientId
           Identity__ClientSecret: !Ref IdentityClientSecret
           Commands__ServiceUri: !Ref CommandsServiceUri
+
+  CommandResourceArnParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /brighid/commands/resources/command/resource-arn
+      Type: String
+      Value: !GetAtt CommandResource.Arn

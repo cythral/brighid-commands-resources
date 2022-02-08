@@ -26,10 +26,18 @@ namespace Brighid.Commands.Resources
         {
             services.ConfigureBrighidIdentity<IdentityConfig>(configuration.GetSection("Identity"));
             services.AddBrighidCommands(configuration.GetSection("Commands").Bind);
-            services.AddSingleton(new JsonSerializerOptions
+            services.AddSingleton(CreateJsonOptions());
+        }
+
+        private static JsonSerializerOptions CreateJsonOptions()
+        {
+            var options = new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true,
-            });
+            };
+
+            options.Converters.Add(new BoolValueConverter());
+            return options;
         }
     }
 }

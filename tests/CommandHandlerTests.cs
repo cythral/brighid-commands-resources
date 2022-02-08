@@ -21,6 +21,7 @@ namespace Brighid.Commands.Resources
     public class CommandHandlerTests
     {
         [TestFixture]
+        [Category("Unit")]
         public class CreateTests
         {
             [Test, Auto]
@@ -52,6 +53,7 @@ namespace Brighid.Commands.Resources
         }
 
         [TestFixture]
+        [Category("Unit")]
         public class UpdateTests
         {
             [Test, Auto]
@@ -83,6 +85,7 @@ namespace Brighid.Commands.Resources
         }
 
         [TestFixture]
+        [Category("Unit")]
         public class DeleteTests
         {
             [Test, Auto]

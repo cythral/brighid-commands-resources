@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 using Lambdajection.Core;
 
@@ -34,9 +35,11 @@ namespace Brighid.Commands.Resources
             var options = new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true,
+                NumberHandling = JsonNumberHandling.WriteAsString | JsonNumberHandling.AllowReadingFromString,
             };
 
             options.Converters.Add(new BoolValueConverter());
+            options.Converters.Add(new JsonStringEnumConverter());
             return options;
         }
     }

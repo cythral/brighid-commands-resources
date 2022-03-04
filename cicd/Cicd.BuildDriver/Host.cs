@@ -72,6 +72,27 @@ namespace Brighid.Commands.Cicd.BuildDriver
                 outputs = await ArtifactsStack.Deploy(cancellationToken);
             });
 
+            await Step("Package Template", async () =>
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+
+                var command = new Command(
+                    command: "aws cloudformation package",
+                    options: new Dictionary<string, object>
+                    {
+                        ["--template-file"] = ProjectRootDirectoryAttribute.ThisAssemblyProjectRootDirectory + "cicd/template.yml",
+                        ["--s3-bucket"] = outputs.BucketName,
+                        ["--s3-prefix"] = options.Version,
+                        ["--output-template-file"] = ProjectRootDirectoryAttribute.ThisAssemblyProjectRootDirectory + "bin/Cicd/template.yml",
+                    }
+                );
+
+                await command.RunOrThrowError(
+                    errorMessage: "Could not package CloudFormation template.",
+                    cancellationToken: cancellationToken
+                );
+            });
+
             await Step("Create Environment Config Files", async () =>
             {
                 cancellationToken.ThrowIfCancellationRequested();

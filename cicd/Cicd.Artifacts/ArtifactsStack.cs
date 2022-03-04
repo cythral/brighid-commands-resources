@@ -90,7 +90,7 @@ namespace Brighid.Commands.Artifacts
             _ = new CfnOutput(this, nameof(ArtifactsStackOutputs.BucketName), new CfnOutputProps
             {
                 Value = bucket.BucketName,
-                Description = "Name of the Artifacts Bucket for Brighid Commands.",
+                Description = "Name of the Artifacts Bucket for Brighid Commands Resources.",
             });
         }
     }

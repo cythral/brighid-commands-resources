@@ -66,8 +66,8 @@
       },
       "Amazon.JSII.Runtime": {
         "type": "Transitive",
-        "resolved": "1.52.1",
-        "contentHash": "d0gHcDqwT1ApWAqSXCOPtSJNE0f/ty6RsufN9jdl9jTDP6aohgMOiF3SdXUTPH8DXrHXcEq0M1PKXm6UU6876Q==",
+        "resolved": "1.54.0",
+        "contentHash": "XJ9/Cpzq7izZ5RpT5eJWDOJGGv9tdxKX5s8x4VtikKn7m5gHW73RDvftZ1PIukzsEA2TUxeNHOSoOG5nIDB6oQ==",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
           "Microsoft.Extensions.Logging": "5.0.0",
@@ -153,46 +153,12 @@
           "Microsoft.Extensions.Options.ConfigurationExtensions": "5.0.0"
         }
       },
-      "AWSSDK.KeyManagementService": {
-        "type": "Transitive",
-        "resolved": "3.7.2.63",
-        "contentHash": "PfUXSOMSAN4iTfZZ79gsAjZNZPIKs0odbZK/0BzV3yE6PgR3vGIu5/fpWORXZKtZpDFpewLRkvIILnUmeGOmUg==",
-        "dependencies": {
-          "AWSSDK.Core": "[3.7.6.1, 4.0.0)"
-        }
-      },
-      "Brighid.Commands.Client": {
-        "type": "Transitive",
-        "resolved": "0.2.0-beta5",
-        "contentHash": "JAfRH/Vnx0WhclcRbQgy/UVPufQRCFFReHCWuMcaiRkaniKRNcaLA4zKsjNKWTWadAfeYQe4xxrErD0Y7djJ6Q==",
-        "dependencies": {
-          "Brighid.Identity.Client": "0.4.0",
-          "Microsoft.Extensions.Caching.Memory": "6.0.1",
-          "Microsoft.Extensions.Configuration": "6.0.0",
-          "Microsoft.Extensions.DependencyInjection": "6.0.0",
-          "Microsoft.Extensions.Http": "6.0.0",
-          "Microsoft.Extensions.Options": "6.0.0",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "6.0.0"
-        }
-      },
-      "Brighid.Identity.Client": {
-        "type": "Transitive",
-        "resolved": "0.4.0",
-        "contentHash": "19PKQd1Db3WOEjHGXhOvPLEUxz1qxW8LUpfZ20g0aeRmKeAqWxCfixxBDDjgmmyN9W/h8y+5C+kLq6fJVTFwGQ==",
-        "dependencies": {
-          "Microsoft.Extensions.Configuration": "5.0.0",
-          "Microsoft.Extensions.DependencyInjection": "5.0.1",
-          "Microsoft.Extensions.Http": "5.0.0",
-          "Microsoft.Extensions.Options": "5.0.0",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "5.0.0"
-        }
-      },
       "Constructs": {
         "type": "Transitive",
-        "resolved": "10.0.57",
-        "contentHash": "rxv0qFm5z6PMFZFgXa9WR25ssQHBzfDhlyeXWQrBZelYuGwraKuQt4IU+MpLMCfb7/7VLOxpKNtnaOy3II3rnw==",
+        "resolved": "10.0.78",
+        "contentHash": "fk7Gh6fnCbxHbIdBsbrtzfyzHPd+8eHutGwM2oJy/+sYtBJzfhSB47W5BqNQ9tZsQw/mjW5pri3nAIckKKa4GA==",
         "dependencies": {
-          "Amazon.JSII.Runtime": "[1.52.1, 2.0.0)"
+          "Amazon.JSII.Runtime": "[1.54.0, 2.0.0)"
         }
       },
       "Humanizer.Core": {
@@ -1843,7 +1809,7 @@
         "dependencies": {
           "Amazon.CDK.Lib": "2.12.0",
           "Cicd.Utils": "1.0.0",
-          "Constructs": "10.0.57",
+          "Constructs": "10.0.78",
           "Microsoft.Build.Framework": "17.0.0",
           "Microsoft.Build.Utilities.Core": "17.0.0"
         }

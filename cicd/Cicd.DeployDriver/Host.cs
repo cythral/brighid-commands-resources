@@ -76,7 +76,7 @@ namespace Brighid.Commands.Cicd.DeployDriver
                     StackName = "brighid-commands-resources",
                     TemplateURL = $"https://{options.ArtifactsLocation!.Host}.s3.amazonaws.com{options.ArtifactsLocation!.AbsolutePath}/template.yml",
                     Parameters = config!.Parameters ?? new(),
-                    Capabilities = { "CAPABILITY_AUTO_EXPAND" },
+                    Capabilities = { "CAPABILITY_AUTO_EXPAND", "CAPABILITY_IAM" },
                     Tags = config.Tags ?? new(),
                 };
 

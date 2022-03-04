@@ -37,7 +37,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="../../src/Resources.Command/Resources.Command.csproj" ReferenceOutputAssembly="false" Targets="$(BuildTargets)" />
+        <ProjectReference Include="../../src/Resources.Command/Resources.Command.csproj" Targets="$(BuildTargets)" />
         <ProjectReference Include="../../tests/Tests.csproj" ReferenceOutputAssembly="false" Targets="$(BuildTargets)" />
         <ProjectReference Include="../Cicd.Artifacts/Cicd.Artifacts.csproj" />
         <ProjectReference Include="../Cicd.Utils/Cicd.Utils.csproj" />

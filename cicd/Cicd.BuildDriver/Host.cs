@@ -150,7 +150,11 @@ namespace Brighid.Commands.Cicd.BuildDriver
 
             var deserializer = new DeserializerBuilder().Build();
             var config = deserializer.Deserialize<Config>(configReader);
-            var parameters = new Dictionary<string, string>();
+            var parameters = new Dictionary<string, string>
+            {
+                ["DotnetVersion"] = DotnetSdkVersionAttribute.ThisAssemblyDotnetSdkVersion,
+                ["LambdajectionVersion"] = LambdajectionVersionAttribute.ThisAssemblyLambdajectionVersion,
+            };
 
             foreach (var (parameterName, parameterDefinition) in config.Parameters)
             {

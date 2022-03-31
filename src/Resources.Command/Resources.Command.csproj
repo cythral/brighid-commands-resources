@@ -2,13 +2,14 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+        <PlatformTarget>AnyCPU</PlatformTarget>
         <SelfContained>false</SelfContained>
         <PublishReadyToRun>true</PublishReadyToRun>
         <NoWarn>CS8073;NU5104</NoWarn>
         <AssemblyName>Brighid.Commands.Resources.Command</AssemblyName>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Brighid.Commands.Client" Version="0.2.0-beta5" />
+        <PackageReference Include="Brighid.Commands.Client" Version="0.2.0-beta6" />
         <PackageReference Include="Lambdajection" Version="0.9.2" />
         <PackageReference Include="Lambdajection.CustomResource" Version="0.9.2" />
         <PackageReference Include="Lambdajection.Encryption" Version="0.9.2" />

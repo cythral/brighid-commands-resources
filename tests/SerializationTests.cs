@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text.Json;
 
 using FluentAssertions;
@@ -21,10 +22,17 @@ namespace Brighid.Commands.Resources
         }
 
         [Test, Auto]
-        public void EnumsShouldSerializeFromStrings()
+        public void EnumsShouldSerializeFromStrings(
+            string clientId
+        )
         {
             var services = new ServiceCollection();
-            var configuration = new ConfigurationBuilder().Build();
+            var configuration = new ConfigurationBuilder()
+            .AddInMemoryCollection(new Dictionary<string, string>
+            {
+                ["Identity:ClientId"] = clientId,
+            })
+            .Build();
 
             services.AddSingleton<IConfiguration>(configuration);
             new Startup(configuration).ConfigureServices(services);

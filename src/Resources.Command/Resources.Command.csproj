@@ -2,6 +2,7 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+        <PlatformTarget>AnyCPU</PlatformTarget>
         <SelfContained>false</SelfContained>
         <PublishReadyToRun>true</PublishReadyToRun>
         <NoWarn>CS8073;NU5104</NoWarn>

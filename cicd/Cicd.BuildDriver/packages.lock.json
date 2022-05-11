@@ -283,16 +283,14 @@
       },
       "Microsoft.Build.Utilities.Core": {
         "type": "Transitive",
-        "resolved": "17.1.0",
-        "contentHash": "JqhQ4q6L4IyA0Wh3PrDrxHHYMVHyOLIusyC4imAnhcnZiOC4+CwgVRSdo8fLsQmvz0Jab8FFrU1NPZFbDoxRng==",
+        "resolved": "17.2.0",
+        "contentHash": "u/EovDpKFkT+u0UH3pXgYporYAwBSNi6L3e3Aj0ZtaF11YyQSeoABKnCFxYfwzZsllRx344kkCVHEjDOJFvb5Q==",
         "dependencies": {
-          "Microsoft.Build.Framework": "17.1.0",
+          "Microsoft.Build.Framework": "17.2.0",
           "Microsoft.NET.StringTools": "1.0.0",
           "Microsoft.Win32.Registry": "4.3.0",
           "System.Collections.Immutable": "5.0.0",
-          "System.Configuration.ConfigurationManager": "4.7.0",
-          "System.Security.Permissions": "4.7.0",
-          "System.Text.Encoding.CodePages": "4.0.1"
+          "System.Configuration.ConfigurationManager": "4.7.0"
         }
       },
       "Microsoft.CodeAnalysis": {
@@ -1837,7 +1835,7 @@
           "Cicd.Utils": "1.0.0",
           "Constructs": "10.1.6",
           "Microsoft.Build.Framework": "17.2.0",
-          "Microsoft.Build.Utilities.Core": "17.1.0"
+          "Microsoft.Build.Utilities.Core": "17.2.0"
         }
       },
       "cicd.utils": {

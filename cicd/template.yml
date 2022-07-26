@@ -25,12 +25,6 @@ Parameters:
     Description: URI of the commands service.
 
 Resources:
-  CommandsCustomResourcesSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: Security Group for Brighid Commands Custom Resources
-      VpcId: !ImportValue cfn-utilities:VpcId
-
   CommandResource:
     Type: AWS::Serverless::Function
     Properties:
@@ -46,8 +40,8 @@ Resources:
         - !Sub "{{resolve:ssm:/lambdajection/${LambdajectionVersion}/layer-arn}}"
       VpcConfig:
         SecurityGroupIds:
-          - !Ref CommandsCustomResourcesSecurityGroup
-        SubnetIds: !Split [",", !ImportValue cfn-utilities:PrivateSubnetIds]
+          - !ImportValue cfn-utilities:LambdaSecurityGroupId
+        SubnetIds: !Split [",", !ImportValue cfn-utilities:SubnetIds]
       Environment:
         Variables:
           Identity__IdentityServerUri: !Ref IdentityServerUri

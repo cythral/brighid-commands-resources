@@ -22,11 +22,11 @@
       },
       "AWSSDK.ECRPublic": {
         "type": "Direct",
-        "requested": "[3.7.0.214, )",
-        "resolved": "3.7.0.214",
-        "contentHash": "yOXr32I0pWd64wXM6DTMS+sPN9YrCJHYqT7iQ6vTRaVFqoJlzLPtfXzzoxRY6GMbaVXk5sMtjHIrxpHAAE7qNg==",
+        "requested": "[3.7.0.216, )",
+        "resolved": "3.7.0.216",
+        "contentHash": "5REEromqD3Y3X7q2AcUkE+4vKoOam0KL47obXewA0HivoMGFw9aOo6hor/xZQ4I6h+zcjmpSCcaPyHNyafrpog==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.13.12, 4.0.0)"
+          "AWSSDK.Core": "[3.7.13.14, 4.0.0)"
         }
       },
       "StyleCop.Analyzers": {
@@ -40,8 +40,8 @@
       },
       "AWSSDK.Core": {
         "type": "Transitive",
-        "resolved": "3.7.13.12",
-        "contentHash": "d55x/zTkL7vmD3HguNziBPN1HsSHiniPR/uNH9r7R8i4PVRJP9ppXbciyHPuhWaDziU1poXx50FgyokY/Ukw9w=="
+        "resolved": "3.7.13.14",
+        "contentHash": "ghcO8KytsmyWZxJVmBghvjQ5O/VOSKglTiA39kcxnwqz/yDNcjXu2f9Hok7WSQtxGrXInMP9HGfwyGKum5CziQ=="
       },
       "StyleCop.Analyzers.Unstable": {
         "type": "Transitive",

@@ -2,6 +2,6 @@
   <ItemGroup>
     <PackageReference Include="AWSSDK.CloudFormation" Version="3.7.11.37" />
     <PackageReference Include="AWSSDK.ECR" Version="3.7.4.76" />
-    <PackageReference Include="AWSSDK.ECRPublic" Version="3.7.0.214" />
+    <PackageReference Include="AWSSDK.ECRPublic" Version="3.7.0.216" />
   </ItemGroup>
 </Project>
